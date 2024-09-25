@@ -1,0 +1,77 @@
+body {
+    width: 800px;
+    height: 800px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ccc; 
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+footer a {
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+code{
+    background-color: rgb(195, 233, 233);
+}
+
+hr {
+    width:50%;
+}
+.container {
+    margin:0 auto;
+    width: 100%;
+    text-align: center;
+}
+.interest {
+    margin-top:-25%;
+    margin-left:10%;
+    margin-bottom:10%;
+    width:80%;
+    align-items:25%;
+    text-align:center;
+    
+}
+#result {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    font-size: 25px;
+}

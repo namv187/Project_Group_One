@@ -1,0 +1,23 @@
+Nam Vu explantions
+
+The three elements i chosen are:
+<code>
+<hr>
+<output>
+
+The three attributes ive chosed are:
+src
+onclick
+type
+
+
+<code> is used to show those who are curious what code is used for the javascript on the screen i used.
+<hr> was used to split the results from the other part of the container
+<output> was used to specify the results in a output of the answer so there's flexibility on to change the element
+
+
+"src" is an attribute used in <script> element to determine the javascript file that the website is going to use
+
+"onclick" is an attribute tied to the <button> element and is used to perform an action.
+
+"type" determines the variable that is entered in the <input> element. The type I've chosen are numbers which would only accept numbers as valid inputs for the javascript code.

@@ -25,3 +25,6 @@ sudo apt install git -y
 
 # Install VSCode
 sudo snap install --classic code
+
+
+need sql connector code

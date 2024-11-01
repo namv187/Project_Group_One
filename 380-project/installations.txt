@@ -27,4 +27,4 @@ sudo apt install git -y
 sudo snap install --classic code
 
 
-need sql connector code
+#need sql connector code for ubuntu 22.0.4 or windows 11

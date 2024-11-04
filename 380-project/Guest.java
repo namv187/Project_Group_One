@@ -39,8 +39,8 @@ public class Guest {
     public void setGuestId(int guestId) { 
         this.guestId = guestId; 
     }
-    public void setName(String fName, String lName){
-        this.name=fName+" "+lName;
+    public void setName(String name){
+        this.name=name;
     }
     public void setEmail(String email){
         this.email=email;

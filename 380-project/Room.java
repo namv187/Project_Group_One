@@ -1,22 +1,22 @@
 public class Room {
-    private int roomId;
+    private int roomID;
     private String roomNum;
     private String roomType;
     private double price;
-    private boolean availability;
+    private boolean avail; //room availabiltiy
 
     //constructor
-    public Room(int roomId, String roomNum, String roomType, double price, boolean availability) {
-        this.roomId = roomId;
+    public Room(int roomID, String roomNum, String roomType, double price, boolean avail) {
+        this.roomID = roomID;
         this.roomNum = roomNum;
         this.roomType = roomType;
         this.price = price;
-        this.availability = availability;
+        this.avail = avail;
     }
 
     //getters 
     public int getRoomId() {
-        return roomId;
+        return roomID;
     }
 
     public String getRoomNum() {
@@ -31,9 +31,12 @@ public class Room {
         return price;
     }
 
+    public boolean getAvail(){
+        return avail;
+    }
     //setters
-    public void setRoomId(int roomId) {
-        this.roomId = roomId;
+    public void setRoomId(int roomID) {
+        this.roomID = roomID;
     }
 
     public void setRoomNum(String roomNum) {
@@ -48,23 +51,23 @@ public class Room {
         this.price = price;
     }
 
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
+    public void setAvail(boolean avail) {
+        this.avail = avail;
     }
 
 
-    public boolean isAvailability() {
-        return availability;
+    public boolean isAvail() {
+        return avail;
     }
 
     @Override
     public String toString() {
         return "Room{" +
-                "roomId=" + roomId +
+                "roomId=" + roomID +
                 ", roomNumber='" + roomNum + '\'' +
                 ", roomType='" + roomType + '\'' +
                 ", price=" + price +
-                ", availability=" + availability +
+                ", availability=" + avail +
                 '}';
     }
 }

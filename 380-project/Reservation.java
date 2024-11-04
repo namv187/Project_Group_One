@@ -7,9 +7,17 @@ public class Reservation {
     private LocalDate checkInDate;
     private LocalDate checkOutDate;
     private double totalCost;
-    private String status;
+    private Status status;
+    private boolean payment;
 
-    public Reservation(int resId, int guestId, int roomId, LocalDate checkInDate, LocalDate checkOutDate, double totalCost, String status) {
+    public enum Status {
+        booked, checked_in, checked_out, canceled
+    }
+    
+    public Reservation(
+        int resId, int guestId, int roomId, 
+        LocalDate checkInDate, LocalDate checkOutDate, 
+        double totalCost, Status status, boolean payment) {
         this.resId = resId;
         this.guestId = guestId;
         this.roomId = roomId;
@@ -17,8 +25,9 @@ public class Reservation {
         this.checkOutDate = checkOutDate;
         this.totalCost = totalCost;
         this.status = status;
+        this.payment = payment;
     }
-
+    
     //getters
     public int getResId() {
         return resId;
@@ -38,38 +47,43 @@ public class Reservation {
     public double getTotalCost() {
         return totalCost;
     }
-        public String getStatus() {
+    public Status getStatus() {
         return status;
+    }
+    public boolean getPayment(){
+        return payment;
     }
     
     //setters
     public void setResId(int resId) {
         this.resId = resId;
     }
-
     public void setGuestId(int guestId) {
         this.guestId = guestId;
     }
-
     public void setRoomId(int roomId) {
         this.roomId = roomId;
     }
-
     public void setCheckInDate(LocalDate checkInDate) {
         this.checkInDate = checkInDate;
     }
     public void setCheckOutDate(LocalDate checkOutDate) {
         this.checkOutDate = checkOutDate;
     }
-
     public void setTotalCost(double totalCost) {
         this.totalCost = totalCost;
     }
-
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
+    public void setPayment(boolean payment) {
+        this.payment=payment;
+    }
 
+    public boolean isPaid(){
+        return payment;
+    }
+    
     @Override
     public String toString() {
         return "Reservation{" +

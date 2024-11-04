@@ -46,12 +46,7 @@ public class HotelSystem {
         String gAddress=sc.nextLine();
 
         Guest guest= new Guest(0, gName, gEmail, gPhone, gAddress);
-        boolean isAdded = guestData.addGuest(guest);
-        if(isAdded){
-            System.out.println("added");
-        } else{
-            System.out.println("something went wrong");
-        }
+        guestData.addGuest(guest);
     }
 
     private void searchGuest(){

@@ -133,6 +133,11 @@ public class RoomData {
         return rooms;
     }
 
+    public List<Room> listRoom(){
+        List<Room> rooms = new ArrayList<>();
+        String qry="SELECT * FROM Room WHERE avail = TRUE";
+        return rooms;
+    }
     public void updatePrice(int id, double price){
         String qry="UPDATE Room SET price = ? WHERE roomID = ?";
         try(Connection connect = SqlConnector.getConnection();

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Set MySQL credentials
-DB_NAME="cit480_db"
+DB_NAME="project480"
 DB_USER_NEW="admin"
 DB_PASSWORD_NEW="password"
-SQL_DUMP_PATH="/var/www/html/cit480-project/db/cit480_db_dump.sql"
+SQL_DUMP_PATH="/home/vboxuser/Desktop/Project_Group_One/OtherFiles/project480.sql"
 
 # Run MySQL commands
 sudo mysql <<MYSQL_SCRIPT

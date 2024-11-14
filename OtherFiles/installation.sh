@@ -10,9 +10,12 @@ sudo apt install php php-mbstring php-xml php-bcmath php-json php-curl unzip -y
 
 sudo apt install git -y
 
-#install vscode
+#install snap and vscode
 sudo apt install snapd -y
 sudo apt install code --classic
+
+#install curl
+sudo apt install curl
 
 # DEBIAN_FRONTEND=noninteractive makes the script non interactive
 # Install OpenSSH Server

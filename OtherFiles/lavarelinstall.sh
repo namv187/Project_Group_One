@@ -36,10 +36,6 @@ sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=password/' .env
 echo "Generating application key..."
 php artisan key:generate
 
-# Prompt user to edit the .env file for any other changes
-echo "Please review and edit the .env file as needed. Press any key to continue after editing..."
-read -n 1 -s -r
-
 # Install npm dependencies
 echo "Installing npm dependencies..."
 npm install

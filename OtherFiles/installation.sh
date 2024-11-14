@@ -15,7 +15,7 @@ sudo apt install snapd -y
 sudo apt install code --classic
 
 #install curl
-sudo apt install curl
+sudo apt install curl -y
 
 # DEBIAN_FRONTEND=noninteractive makes the script non interactive
 # Install OpenSSH Server

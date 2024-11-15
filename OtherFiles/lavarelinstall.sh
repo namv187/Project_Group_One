@@ -20,10 +20,8 @@ sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=password/' .env
 # Generate application key
 php artisan key:generate
 
-# Install npm dependencies
+# Install npm dependencies #errors here
 npm install
-
-# Build the frontend assets (optional, based on your project setup)
 npm run build
 
 # Serve the application using Artisan

@@ -1,43 +1,30 @@
 #!/bin/bash
-
-# Install NVM (Node Version Manager)
-echo "Installing NVM..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-
-# Load NVM script to the shell
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# Install Node.js version v22.11.0 using NVM
-echo "Installing Node.js version v22.11.0..."
-nvm install v22.11.0
-nvm use v22.11.0
+#you might have to manually install this part for laravel
+cd /var/www/
+git clone https://github.com/Alexisb710/project480.git
+cd project480
 
 # Install Composer dependencies
-echo "Installing Composer dependencies..."
 composer install
 
-# Set up the .env file
-echo "Setting up the .env file..."
+#change env.
+cp .env.example .env
 
 # Replace DB_DATABASE, DB_USERNAME, and DB_PASSWORD values in .env
+# sudo nano .env
 echo "Updating database configuration in .env file..."
 sed -i 's/^DB_DATABASE=.*/DB_DATABASE=project480/' .env
 sed -i 's/^DB_USERNAME=.*/DB_USERNAME=admin/' .env
 sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=password/' .env
 
 # Generate application key
-echo "Generating application key..."
 php artisan key:generate
 
 # Install npm dependencies
-echo "Installing npm dependencies..."
 npm install
 
 # Build the frontend assets (optional, based on your project setup)
-echo "Building frontend assets..."
 npm run build
 
 # Serve the application using Artisan
-echo "Starting the Laravel development server..."
 php artisan serve

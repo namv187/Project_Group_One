@@ -3,7 +3,7 @@
 # Define variables
 GITHUB_REPO="https://github.com/namv187/DB.git"
 CLONE_DIR="/tmp/db_repo"
-SQL_FILE="mysql.sh" # Adjust the name if the SQL file has a different name
+SQL_FILE="project480.sql" # Adjust the name if the SQL file has a different name
 DOWNLOAD_PATH="$CLONE_DIR/$SQL_FILE"
 MYSQL_USER="admin"
 MYSQL_PASSWORD="password"

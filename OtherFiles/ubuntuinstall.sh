@@ -19,7 +19,25 @@ sudo snap install code --classic
 sudo apt install curl -y
 
 # Install Apache, MySQL, PHP 8.2, and required PHP extensions
-sudo apt-get install -y apache2 mysql-server php8.2 libapache2-mod-php8.2 php8.2-mysql php8.2-mbstring php8.2-xml php8.2-bcmath php8.2-json php8.2-curl unzip
+sudo apt install mysql-server -y
+
+sudo apt install apache2 -y
+
+sudo apt install php8.2 -y
+
+sudo apt install libapache2-mod-php8.2 -y
+
+sudo apt install php8.2-mysql -y
+
+sudo apt install php8.2-mbstring -y
+
+sudo apt install php8.2-xml -y
+
+sudo apt install php8.2-bcmath -y
+
+sudo apt install php8.2-curl -y 
+
+sudo apt install unzip -y
 
 # Enable PHP 8.2 module for Apache
 sudo a2enmod php8.2

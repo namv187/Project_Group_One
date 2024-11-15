@@ -2,7 +2,7 @@
 
 # Variables
 REPO_URL="https://github.com/Alexisb710/project480.git"
-DEST_DIR="/var/www/"
+DEST_DIR="/var/www/project480"
 
 # Remove existing content from the Apache web directory (optional, be cautious)
 echo "Removing old website files from $DEST_DIR ..."

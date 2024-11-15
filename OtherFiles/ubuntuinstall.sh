@@ -39,6 +39,7 @@ sudo apt install php8.2-curl -y
 
 sudo apt install unzip -y
 
+sudo apt install php8.2-intl -y
 # Enable PHP 8.2 module for Apache
 sudo a2enmod php8.2
 
@@ -58,7 +59,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 # Load NVM script to the shell
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  
 
 # Alternatively, you can source the bashrc to ensure NVM is available
 source ~/.bashrc
@@ -66,6 +67,9 @@ source ~/.bashrc
 # Install Node.js version v22.11.0 using NVM
 nvm install v22.11.0
 nvm use v22.11.0
+
+#install composer
+sudo apt install composer -y
 
 # Confirm installation completion
 echo "Installation complete"

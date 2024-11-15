@@ -16,7 +16,7 @@ sudo aws s3 cp s3://nv3bucket/mysql.sh /home/ubuntu/mysql.sh
 # Make the script executable
 chmod +x /home/ubuntu/installation.sh
 chmod +x /home/ubuntu/gitrepo.sh
-chmod +x /home/ubuntu/implementation.sh
+#chmod +x /home/ubuntu/implementation.sh
 chmod +x /home/ubuntu/mysql.sh
 
 

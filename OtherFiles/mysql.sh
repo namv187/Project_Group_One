@@ -1,23 +1,28 @@
 #!/bin/bash
 
 # Define variables
-GITHUB_URL="https://raw.githubusercontent.com/namv187/Project_Group_One/main/OtherFiles/mysql.sh"
-DOWNLOAD_PATH="/var/www/mysql.sh"
+GITHUB_REPO="https://github.com/namv187/DB.git"
+CLONE_DIR="/tmp/db_repo"
+SQL_FILE="mysql.sh" # Adjust the name if the SQL file has a different name
+DOWNLOAD_PATH="$CLONE_DIR/$SQL_FILE"
 MYSQL_USER="admin"
 MYSQL_PASSWORD="password"
 DATABASE_NAME="project480"
 
-# Download SQL file from GitHub
-echo "Downloading SQL file from GitHub..."
-curl -o "$DOWNLOAD_PATH" "$GITHUB_URL"
+# Clone the Git repository
+echo "Cloning the database repository..."
+if [ -d "$CLONE_DIR" ]; then
+    sudo rm -rf "$CLONE_DIR"
+fi
+git clone "$GITHUB_REPO" "$CLONE_DIR"
 
-# Check if the file was downloaded
+# Check if the SQL file exists
 if [ ! -f "$DOWNLOAD_PATH" ]; then
-    echo "Failed to download the SQL file. Exiting."
+    echo "Error: SQL file not found at $DOWNLOAD_PATH"
     exit 1
 fi
 
-# Run MySQL commands
+# Run MySQL commands to set up database and user
 echo "Setting up MySQL database and user..."
 sudo mysql -u root <<MYSQL_SCRIPT
 CREATE DATABASE IF NOT EXISTS $DATABASE_NAME;

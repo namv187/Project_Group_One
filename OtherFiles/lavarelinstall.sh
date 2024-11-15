@@ -13,12 +13,6 @@ echo "Installing Node.js version v22.11.0..."
 nvm install v22.11.0
 nvm use v22.11.0
 
-# Clone the Laravel project repository
-echo "Cloning project480 repository..."
-cd /var/www/
-git clone https://github.com/Alexisb710/project480.git
-cd project480
-
 # Install Composer dependencies
 echo "Installing Composer dependencies..."
 composer install

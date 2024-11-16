@@ -55,7 +55,7 @@ sudo systemctl start mysql
 sudo systemctl enable mysql
 
 # Install NVM (Node Version Manager)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 # Load NVM script to the shell
 export NVM_DIR="$HOME/.nvm"

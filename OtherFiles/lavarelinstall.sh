@@ -4,19 +4,21 @@ cd /var/www/project480
 #git clone https://github.com/Alexisb710/project480.git
 #cd project480
 
+sudo chown -R $USER:$USER /var/www/project480
+
 # Install Composer dependencies
 composer install
 
 #change env.
-cp .env.example .env
+sudo cp .env.example .env
 
 # Replace DB_DATABASE, DB_USERNAME, and DB_PASSWORD values in .env
-sed -i 's/^DB_DATABASE=.*/DB_DATABASE=project480/' .env
-sed -i 's/^DB_USERNAME=.*/DB_USERNAME=admin/' .env
-sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=password/' .env
+sudo sed -i 's/^DB_DATABASE=.*/DB_DATABASE=project480/' .env
+sudo sed -i 's/^DB_USERNAME=.*/DB_USERNAME=admin/' .env
+sudo sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=password/' .env
 #
 # Generate application key
-php artisan key:generate
+sudo php artisan key:generate
 
 # Install npm dependencies #errors here
 npm install

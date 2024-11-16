@@ -17,7 +17,7 @@ sudo cp .env.example .env
 sudo sed -i 's/^DB_DATABASE=.*/DB_DATABASE=project480/' .env
 sudo sed -i 's/^DB_USERNAME=.*/DB_USERNAME=admin/' .env
 sudo sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=password/' .env
-#
+
 # Generate application key
 sudo php artisan key:generate
 

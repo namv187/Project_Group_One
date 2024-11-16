@@ -7,7 +7,8 @@ cd /var/www/project480
 sudo chown -R $USER:$USER /var/www/project480
 
 # Install Composer dependencies
-composer install
+# would have to manually do this part
+sudo composer install
 
 #change env.
 sudo cp .env.example .env

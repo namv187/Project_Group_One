@@ -34,6 +34,16 @@ CREATE TABLE `Guest` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `Guest`
+--
+
+LOCK TABLES `Guest` WRITE;
+/*!40000 ALTER TABLE `Guest` DISABLE KEYS */;
+INSERT INTO `Guest` VALUES (1,'testname','g@gm.com','123-444-5555','123 fake street'),(2,'nam','n@g.com','555','123'),(4,'4','4@4.com','444-444-4444','123-456-7890'),(5,'test5','5@5.com','555-555-5555','555 fake street');
+/*!40000 ALTER TABLE `Guest` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Reservation`
 --
 
@@ -58,6 +68,16 @@ CREATE TABLE `Reservation` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `Reservation`
+--
+
+LOCK TABLES `Reservation` WRITE;
+/*!40000 ALTER TABLE `Reservation` DISABLE KEYS */;
+INSERT INTO `Reservation` VALUES (1,2,2,'2024-01-01','2025-01-01',10.10,'CHECKEDIN',0),(3,2,2,'2024-10-10','2024-10-15',19.19,'CHECKEDIN',0),(4,5,5,'2024-11-25','2024-11-27',20.20,'BOOKED',0);
+/*!40000 ALTER TABLE `Reservation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Room`
 --
 
@@ -73,6 +93,16 @@ CREATE TABLE `Room` (
   PRIMARY KEY (`roomID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Room`
+--
+
+LOCK TABLES `Room` WRITE;
+/*!40000 ALTER TABLE `Room` DISABLE KEYS */;
+INSERT INTO `Room` VALUES (2,'22','SINGLE',20.20,1),(3,'3','SUITE',3.00,1),(4,'4','DOUBLE',2020.00,1),(5,'8','DOUBLE',9.90,1),(6,'15','SUITE',10.10,1);
+/*!40000 ALTER TABLE `Room` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `User`
@@ -91,6 +121,16 @@ CREATE TABLE `User` (
   UNIQUE KEY `userEmail` (`userEmail`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `User`
+--
+
+LOCK TABLES `User` WRITE;
+/*!40000 ALTER TABLE `User` DISABLE KEYS */;
+INSERT INTO `User` VALUES (1,'Alice Smith','password','alice.smith@example.com','123-456-7890'),(2,'Bob Johnson','password','bob.johnson@example.com','098-765-4321'),(3,'Carol Williams','password','carol.williams@example.com','555-123-4567'),(4,'admin','password','admin@example.com','111-222-3333'),(5,'admin2','password2','g@g.com','666-777-8888');
+/*!40000 ALTER TABLE `User` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -101,4 +141,4 @@ CREATE TABLE `User` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-22  2:35:41
+-- Dump completed on 2024-11-22  2:56:07
